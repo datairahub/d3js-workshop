@@ -1,0 +1,6 @@
+var lista = d3.select('.chart')
+			.append('ul');
+
+for (var i = 0; i < 5; i++) {
+	lista.append('li').text(i+1);
+}

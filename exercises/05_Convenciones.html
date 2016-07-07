@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<body>
+
+	<div id="chart">
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js"></script>
+	<script>
+
+
+    var margin = {top: 10, right: 10, bottom: 10, left: 10},
+        width = 240 - margin.left - margin.right,
+        height = 360 - margin.top - margin.bottom,
+        barHeight = 30,
+        separation = 5;
+
+    d3.csv("data/artistas.csv", function (error, data) {
+
+		var svg = d3.select('#chart')
+		  .append('svg')
+			.attr("class", "BarChart")
+			.attr("width", width + margin.left + margin.right)
+			.attr("height", height + margin.top + margin.bottom);
+
+		var g = svg.append("g")
+			.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+		var bars = g.selectAll('g')
+			.data(data);
+
+		bars.enter()
+		  .append('g')
+			.attr('class', 'bar')
+			.attr("transform", function(d, i) {
+			  return "translate(0," + i * barHeight + ")";
+			})
+		  .append("rect")
+			.attr("width", function(d){
+				return d.Canciones;
+			})
+			.attr("height", barHeight - separation)
+			.style('fill', 'steelblue');
+
+		bars.append('text')
+			.attr("y", (barHeight-separation)/2 + 4)
+			.attr("x", 10)
+			.text(function(d) {
+				return d.Cantante;
+			});
+	});
+		
+
+	</script>
+
+</body>

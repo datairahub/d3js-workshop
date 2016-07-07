@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<body>
+	<div class="chart">
+		<h1>Ejercicio 3. Datos externos</h1>
+		<p>Generar un gŕafico SVG en función de 2 variables (Canciones y PTotal) <a href="http://www.w3schools.com/svg/svg_inhtml.asp">Pista</a></p>
+	</div>
+
+	<div id="chart"></div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js"></script>
+	<script>
+
+    d3.csv("data/artistas.csv", function (error, data) {
+
+		var svg = d3.select('#chart').append('svg')
+			.attr("width", 800)
+			.attr("height", 800);
+
+		var barras = svg.selectAll('g')
+			.data(data);
+
+		barras.enter()
+		  .append('g')
+			.attr("transform", function(d, i) {
+			  return "translate(0," + i * 30 + ")";
+			})
+		  .append("rect")
+			.attr("height", 25)
+			.attr("width", function(d){
+				return d.Canciones;
+			})
+			.style('fill', 'steelblue');
+
+		barras.append('text')
+			.attr("y", 17)
+			.attr("x", 10)
+			.text(function(d) {
+				return d.Cantante;
+			});
+	});
+
+	</script>
+
+</body>

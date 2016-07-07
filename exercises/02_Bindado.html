@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<style>
+	li { display: block; margin: 10px 0; }
+</style>
+
+<body>
+
+	<div class="chart">
+		<h1>Ejercicio 2. Bindado de datos</h1>
+		<p>1. Crear lista <em>ul</em> y añadir un elementos <em>li</em> por cada elemento del array <em>datos</em>.</p>
+		<p>2. A cada elemento <em>li</em> ponerle de texto su número <strong>y su valor según array <em>datos</em></strong>.</p>
+		<p>3. A todos los elementos <em>li</em> ponerles el fondo de un color, y limitar su ancho en función de su valor.</p>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js"></script>
+	<script>
+
+		// Bindado de datos, array
+		/*
+		var datos = [5, 6, 10, 17, 18, 3, 6, 15];
+
+		var lista = d3.select('.chart').append('div')
+				.attr('class', 'wrap')
+			  .append('ul');
+
+		lista.selectAll('li')
+				.data(datos)
+			  .enter().append('li')
+			  	.text(function(d, i){
+					return 'Elemento: ' + i + ', valor: ' + d ;
+				});
+
+		*/
+
+
+		// Bindado de datos, enter() y exit()
+		/*
+		var datos = [5, 6, 10, 17, 18, 3, 6, 15];
+
+		console.log('datos:', datos);
+
+		var lista = d3.select('.chart').append('div')
+				.attr('class', 'wrap')
+			  .append('ul');
+
+		var elementos = lista.selectAll('li')
+				.data(datos)
+			  .enter().append('li')
+			  	.text(function(d, i){
+					return 'Elemento: ' + i + ', valor: ' + d ;
+				});
+
+		datos.push(27);
+
+		console.log('datos: + 27', datos);
+
+		elementos.data(datos)
+			  .enter().append('li')
+			  	.style('color', 'red')
+			  	.text(function(d, i){
+					return 'Elemento: ' + i + ', valor: ' + d ;
+				});
+
+		datos.splice(0, 3);
+
+		console.log('datos - datos[0]:', datos);
+
+		//var to_remove = elementos.data(datos).exit().remove();
+		var to_remove = elementos.data(datos).exit().style('color', '#ccc');
+
+		*/
+		
+
+	</script>
+
+</body>

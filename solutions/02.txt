@@ -1,0 +1,16 @@
+var datos = [5, 6, 10, 17, 18, 3, 6, 15];
+
+var lista = d3.select('.chart').append('div')
+		.attr('class', 'wrap')
+	  .append('ul');
+
+var elementos = lista.selectAll('li')
+		.data(datos)
+	  .enter().append('li');
+
+elementos.text(function(d, i){
+		return 'Elemento: ' + i + ', valor: ' + d ;
+});
+
+elementos.style('background', 'steelblue')
+		.style('width', function(d) { return d*30 + 'px'; });

@@ -1,0 +1,24 @@
+d3.csv("data/artistas.csv", function (error, data) {
+
+	var svg = d3.select('#chart').append('svg')
+		.attr("width", 800)
+		.attr("height", 800);
+
+	var points = svg.selectAll('g')
+		.data(data)
+	  .enter().append('g')
+	  	.attr('transform', function(d) {
+	  		return 'translate(' + d.Canciones*5 + ',' + d.PTotal/100 + ')' ;
+	  	})
+
+	points.append("circle")
+		.attr("r", 5)
+		.style('fill', 'steelblue');
+
+	points.append('text')
+		.attr("y", 17)
+		.attr("x", 10)
+		.text(function(d) {
+			return d.Cantante;
+		});
+});

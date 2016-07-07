@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<body>
+
+	<div class="chart">
+		<h1>Ejercicio 1. Selectores</h1>
+		<p>1. Crear lista <em>ul</em> y añadir 5 elementos <em>li</em>.</p>
+		<p>2. A cada elemento <em>li</em> ponerle de texto su número (al primero 1, al segundo 2, etc).</p>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js"></script>
+	<script>
+
+		//Selector simple
+		//d3.select('h1').style('color', '#BF30B3');
+
+		//Selector múltiple
+		//d3.selectAll('p').attr('class', 'text');
+
+
+
+
+
+		//Añadir elementos
+		//d3.select('.chart').append('ul').append('li').text('hola');
+
+		//Eliminar elementos
+		//d3.select('.chart').select('h1').remove();
+		//d3.select('.chart h1').remove();
+
+
+
+
+
+		//Cambia todos las clases
+		//d3.selectAll('em').attr('class', 'cursive');
+
+		//Añade clase
+		//d3.selectAll('em').classed('active', true);
+
+		//Elimina clase
+		//d3.selectAll('em').classed('active', false);
+
+
+
+
+		//Guardar selecciones para hacer operaciones rápido
+
+		/*
+		var lista = d3.select('.chart')
+					.append('ul');
+
+		lista.append('li').text('elemento 1');
+		lista.append('li').text('elemento 2');
+		*/
+		
+		/*
+		var lista = d3.select('.chart')
+					.append('ul')
+					.append('li')
+					.text('elemento 1');
+
+		lista.append('li').text('elemento 2');
+		*/
+		
+
+	</script>
+
+</body>
