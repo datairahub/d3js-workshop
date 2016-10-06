@@ -1,6 +1,8 @@
 # D3js Workshop
 Pequeño workshop desarrollado para formación interna de [Quantion](www.quantion.com)
 
+2da Edición
+
 ## Introducción
 [D3js](https://d3js.org/) es una pequeña librería JavaScript para modificar el DOM basándonos en datos (D3 = Data Driven Documents). Es un projecto de código abierto iniciado y dirigido por [Mike Bostock](https://github.com/mbostock) que se está convirtiendo en el estándar para la confección de gráficos y visualizaciones interactivas en entornos web.
 
