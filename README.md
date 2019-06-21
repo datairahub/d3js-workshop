@@ -1,18 +1,18 @@
 # D3js Workshop
-Pequeño workshop desarrollado para formación interna de [Quantion](www.quantion.com)
-
-2da Edición
+Documentación utilizada para workshops/charlas sobre D3js
 
 ## Introducción
-[D3js](https://d3js.org/) es una pequeña librería JavaScript para modificar el DOM basándonos en datos (D3 = Data Driven Documents). Es un projecto de código abierto iniciado y dirigido por [Mike Bostock](https://github.com/mbostock) que se está convirtiendo en el estándar para la confección de gráficos y visualizaciones interactivas en entornos web.
+[D3js](https://d3js.org/) es una pequeña librería JavaScript para modificar el DOM basándonos en datos (D3 = Data Driven Documents). Es un projecto de código abierto iniciado y dirigido por [Mike Bostock](https://github.com/mbostock) que se ha convertido en el estándar para la confección de gráficos y visualizaciones interactivas en entornos web.
 
-Muchas librería de dibujo de gráficas de alto nivel se basan en D3, y es el rey indiscutible cuando nos adentramos en visualizaciones más complejas que un gráfico de barras. D3 es usado por CartoDB, Github, The New York TImes y otros muchos conocidos proyectos.
+Muchas librería de dibujo de gráficas de alto nivel se basan en D3, y es el rey indiscutible cuando nos adentramos en visualizaciones más complejas que van más allá de los gráficos estándar. D3 es usado por CartoDB, Github, The New York TImes y otros muchos conocidos proyectos.
 
-D3, además de la librería, tiene un pequeño ecosistema de aplicaciones web para facilitar su desarrollo y su difusión. La más usada es [bl.ocks.org](http://bl.ocks.org/), que simplemente es una visualización de archivos de [Gist](https://gist.github.com) (si, de github, luego funciona con git). Si queréis más info, el señor Mike Bostock tiene una breve explicación sobre [cómo usar bl.ocks.org](https://bost.ocks.org/mike/block/). 
+D3, además de la librería, tiene un pequeño ecosistema de aplicaciones web para facilitar su desarrollo y su difusión. La más usada es [bl.ocks.org](http://bl.ocks.org/), que simplemente es una visualización de archivos de [Gist](https://gist.github.com) (funciona con git). Para más información, el señor Mike Bostock tiene una breve explicación sobre [cómo usar bl.ocks.org](https://bost.ocks.org/mike/block/). 
 
-Este señor tiene la [colección más grande de ejemplos de D3](https://bl.ocks.org/mbostock), que como podéis ver tienen el código muy accesible
+Mike Bostock tiene la [colección más grande de ejemplos de D3](https://bl.ocks.org/mbostock), con el código justo debajo de cada gráfico.
 
 ----------
+## Versiones
+
 ## Selectores
 Los selectores de D3 se parecen mucho a jQuery:
 
@@ -30,7 +30,7 @@ Los selectores también pueden anidarse y guardarse:
 var body = d3.select('body');
 body.selectAll('p').style('color', 'red');
 ```
-##Añadir y eliminar elementos
+## Añadir y eliminar elementos
 D3 tiene también funciones parecidas a jQuery para estas operaciones:
 ```
 //Añadir elementos
